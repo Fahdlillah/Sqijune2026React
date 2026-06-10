@@ -1,9 +1,10 @@
 import React from 'react'
 
-const AppButton = ({textColor, bgColor, useBorder, type, text }) => {
+const AppButton = ({textColor, bgColor, useBorder, type, text, handleClick }) => {
   return (
     <button 
     type={type ? type : 'button'}
+    onClick={handleClick}
     style={{
         color: textColor ? textColor : 'black',
         backgroundColor: bgColor ? bgColor : 'gray',
@@ -24,7 +25,8 @@ const style ={
         padding: '12px 28px',
         // border: 'none',
         borderRadius: '5px',
-        fontSize: '1em'
+        fontSize: '1em',
+        cursor: 'pointer'
     }
 }
 export default AppButton
