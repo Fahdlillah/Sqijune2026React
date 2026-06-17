@@ -7,21 +7,26 @@ import Landingpage from "./pages/Landingpage";
 import CreateProducts from "./pages/CreateProducts";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Counter from "./hooks/Counter"
+// import Counter from "./hooks/Counter"
 import Showpassword from "./hooks/Showpassword"
-import Products from "./hooks/Products"
+// import Products from "./hooks/Products";
+import Newcounter from "./hooks/Newcounter"
 
 const App = () => {
   return (
     <>
       <Router>
          <Nav />
-          <Counter/>
+          {/* <Counter/> */}
 
           <Showpassword/>
 
 
-          <Products/>
+          {/* <Products/> */}
+
+
+
+          <Newcounter/>
         <Routes>
          {/* <Route path="/" element={<Landingpage/>}/> */}
           <Route path="/login" element={<Login/>}/>

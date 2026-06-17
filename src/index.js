@@ -19,4 +19,14 @@ fetch("https://fakestoreapi/products")
 }).catch((error)=>{
     console.log(error.message);
     
-})
+});
+
+let count = 0;
+console.log(count);
+
+let newCount = count++;
+console.log(newCount);
+
+console.log(count);
+
+
