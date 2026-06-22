@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import { FaBars } from "react-icons/fa"
+
 import "../App.css";
 import AppButton from "./AppButton";
 
@@ -42,6 +44,7 @@ const Nav = () => {
           textColor={"white"}
           handleClick={handleSignup}
         />
+        <FaBars/>
       </div>
     </nav>
   );
