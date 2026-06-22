@@ -7,9 +7,10 @@ import Landingpage from "./pages/Landingpage";
 import CreateProducts from "./pages/CreateProducts";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Counter from "./hooks/Counter"
-import Showpassword from "./hooks/Showpassword"
-import Products from "./hooks/Products"
+import Counter from "./hooks/Counter";
+import Showpassword from "./hooks/Showpassword";
+import Products from "./hooks/Products";
+import CurrencyConverter from "./pages/Currencyconverter";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
 
 
           <Products/>
+
+
+          <CurrencyConverter/>
         <Routes>
          {/* <Route path="/" element={<Landingpage/>}/> */}
           <Route path="/login" element={<Login/>}/>
