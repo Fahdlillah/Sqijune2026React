@@ -1,11 +1,11 @@
 import React from 'react'
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
-import Home from '../components/Home';
+// import Home from '../components/Home';
 
 const Landingpage = () => {
   return (
-    <div style={{backgroundColor: 'blue'}}>
+    <div style={{padding:"20px"}}>
         {/* <Nav/> */}
         <Hero/>
         {/* <Home/> */}
