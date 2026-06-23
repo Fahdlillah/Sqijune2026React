@@ -7,15 +7,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CreateProducts from "./pages/CreateProducts";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-// import Counter from "./hooks/Counter"
-import Showpassword from "./hooks/Showpassword";
-// import Products from "./hooks/Products";
-import Newcounter from "./hooks/Newcounter";
-import Profile from "./components/Profile";
-import UserContext from "./context/UserContext";
-import AppButton from "./components/AppButton";
-import Home from "./components/Home";
-import ThemeContext from "./context/ThemeContext";
+import Counter from "./hooks/Counter"
+import Showpassword from "./hooks/Showpassword"
+import Products from "./hooks/Products"
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -42,13 +36,15 @@ const App = () => {
           <Counter/>
           <Showpassword/>
           <Products/>
-          <Newcounter/> */}
-            <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/create-product" element={<CreateProducts />} />
-            </Routes>
-          </Router>
+        <Routes>
+         {/* <Route path="/" element={<Landingpage/>}/> */}
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<Signup/>}/>
+         <Route path="/create-product" element={<CreateProducts/>}/>
+         
+        </Routes>
+       
+      </Router>
 
           <Home />
         </UserContext.Provider>
