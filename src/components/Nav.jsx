@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { FaBars } from "react-icons/fa"
+import { FaSun } from "react-icons/fa"
+import { FaCartArrowDown } from "react-icons/fa"
 
 import "../App.css";
 import AppButton from "./AppButton";
+import ModeContext from "../context/ModeContext";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -15,22 +17,29 @@ const Nav = () => {
   const handleSignup = ()=>{
     navigate("/signup")
   }
+   const {mode, toggleMode} = useContext(ModeContext);
+
+  const shopsy = ()=>{
+    navigate("/")
+  }
+
+
   return (
     <nav style={style.navs}>
       <div>
-        <h1>
-          <a href="">ShopsSy</a>
+        <h1 style={{cursor:"pointer"}}>
+          <p onClick={shopsy}>ShopsSy</p>
         </h1>
       </div>
       <div style={style.menulist}>
-        <li style={{ color: "green" }}>Products</li>
+        <li>Products</li>
         <Link to={"/create-product"}>
-          <li style={{ color: "green" }}>Create</li>
+          <li style={{color:"black"}}>Create</li>
         </Link>
-        <li style={{ color: "green" }}>Blog</li>
-        <li style={{ color: "green" }}>Contact</li>
+        <li>Blog</li>
+        <li>Contact</li>
       </div>
-      <div style={{ display: "flex", gap: "1em" }}>
+      <div style={{ display: "flex", gap: "1em", alignItems: 'center' }}>
         <AppButton
           text={"login"}
           bgColor={"white"}
@@ -44,7 +53,8 @@ const Nav = () => {
           textColor={"white"}
           handleClick={handleSignup}
         />
-        <FaBars/>
+        <FaSun onClick={toggleMode} style={{fontSize: '1.5em'}} />
+        <FaCartArrowDown/>
       </div>
     </nav>
   );
@@ -56,7 +66,8 @@ const style = {
     justifyContent: "space-around",
     alignItems: "center",
     padding: "20px",
-    backgroundColor: "aliceblue",
+    // backgroundColor: mode === 'light' ? '#fff' : '#333',
+    // backgroundColor: "aliceblue",
   },
   menulist: {
     display: "flex",
